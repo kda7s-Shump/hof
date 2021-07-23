@@ -1,15 +1,15 @@
 var particles_a = [];
 var particles_b = [];
 var particles_c = [];
-var nums =200;
+const num =200;
 var noiseScale = 800;
 
 let canvas;
 function setup(){
-  canvas = createCanvas(windowWidth, 300);
-  canvas.parent("canvas");
-	background(21, 8, 50);
-	for(var i = 0; i < nums; i++){
+  canvas = createCanvas(windowWidth, windowHeight - 22);
+  canvas.parent("Canvas");
+	background(247, 247, 247);
+	for(var i = 0; i < num; i++){
 		particles_a[i] = new Particle(random(0, width),random(0,height));
 		particles_b[i] = new Particle(random(0, width),random(0,height));
 		particles_c[i] = new Particle(random(0, width),random(0,height));
@@ -19,9 +19,9 @@ function setup(){
 function draw(){
 	noStroke();
 	smooth();
-		for(var i = 0; i < nums; i++){
-		var radius = map(i,0,nums,1,2);
-		var alpha = map(i,0,nums,0,250);
+		for(var i = 0; i < num; i++){
+		var radius = map(i,0,num,1,2);
+		var alpha = map(i,0,num,0,250);
 
     fill(46, 87, 64,alpha);
 		particles_a[i].move();
@@ -33,11 +33,11 @@ function draw(){
 		particles_b[i].display(radius);
 		particles_b[i].checkEdge();
 
-		fill(255,255,255,alpha);
+		fill(225,225,225,alpha);
 		particles_c[i].move();
 		particles_c[i].display(radius);
 		particles_c[i].checkEdge();
-	}  
+	}
 }
 
 

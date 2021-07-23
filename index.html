@@ -2,40 +2,37 @@
 <html lang="ja">
 
 <head>
-  <!--<link rel="stylesheet" href="src/css/morning.css">-->
-  <link href="src/css/style.css" rel="stylesheet">
-  <link href="src/img/favicon.ico" rel="icon" sizes="120x120">
-  <link href="src/img/favicon.ico" rel="apple-touch-icon" type="image/png">
+  <link href="assets/css/style.css" rel="stylesheet">
+  <link href="assets/img/favicon.ico" rel="icon" sizes="120x120">
+  <link href="assets/img/favicon.ico" rel="apple-touch-icon" type="image/png">
 
   <meta charset="UTF-8">
   <meta name="author" content="Schnya Asano">
   <meta name="discription" content="浅野竣弥の半生を振り返ったポートフォリオサイト。
               This is the portfolio site of Shunya Asano, author of `Schumpeter's Traveling Economics`,
               looking back on his life.">
-  <meta name="keywords" content="portfolio">
-  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+  <meta name="keywords"     content="portfolio">
+  <meta name="viewport"     content="width=device-width, initial-scale=1, minimum-scale=1">
   <meta property="og:title" content="Schnya Asano's portfolio" />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://kda7s-shump.github.io/index.html" />
-  <meta property="og:image"
-    content="https://github.com/kda7s-Shump/kda7s-Shump.github.io/blob/example/src/img/me.jpg" />
+  <meta property="og:type"  content="website" />
+  <meta property="og:url"   content="https://kda7s-shump.github.io/index.html" />
+  <meta property="og:image" content="https://github.com/Schnya0x274/kda7s-Shump.github.io/blob/example/src/img/me.jpg" />
   <meta property="og:site_name" content="Do you know Schunya Asano?" />
   <meta property="og:description" content="浅野竣弥の半生を振り返ったポートフォリオサイト。
               This is the portfolio site of Shunya Asano, author of `Schumpeter's Traveling Economics`,
               looking back on his life." />
 
   <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12"></script>
-  <script src="src/js/p5.min.js"></script>
-  <script src="src/js/sketch.js"></script>
+  <script src="assets/js/p5.min.js"></script>
+  <script src="assets/js/sketch.js"></script>
 
-  <title>Schnya Penguin</title>
+  <title>PORTFOLIO | Schnya.A</title>
 </head>
 
 <body>
+  <div id="Canvas"></div>
   <header>
-    <div id="Top">
-      <h1 class="font font-S">Shunya Asano</h1>
-    </div>
+      <p style="font-size: 2rem;">Schnya Asano</p>
   </header>
 
   <div id="app">
@@ -48,9 +45,9 @@
             <li><a href="#About">About</a></li>
             <li><a href="#Expertise">Expertise</a></li>
             <li><a href="#Projects">Projects</a></li>
-            <li><a href="#Note">Note</a></li>
+            <!--<li><a href="#Note">Note</a></li>-->
             <li><a href="#Contact">Contact</a></li>
-            <li><img src="src/img/favicon.png" alt="img/png"></li>
+            <li><img src="assets/img/favicon.png" alt="img/png"></li>
           </ul>
         </div>
       </div>
@@ -68,168 +65,158 @@
       <li><a href="#About">About</a></li>
       <li><a href="#Expertise">Expertise</a></li>
       <li><a href="#Projects">Projects</a></li>
-      <li><a href="#Note">Note</a></li>
+      <!--<li><a href="#Note">Note</a></li>-->
       <li><a href="#Contact">Contact</a></li>
-      <li><img src="src/img/favicon.png" alt="img/png"></li>
+      <li><img src="assets/img/favicon.png" alt="img/png"></li>
     </ul>
   </nav>
 
-  <div id="canvas"></div>
-  <h1 class="font font-L">PORTFOLIO SITE</h1>
+  <article>
+    <h1 class="title">PORTFOLIO SITE</h1>
 
-  <section id="About">
-    <h1 class="font font-M">About</h1>
+    <section id="About" class="row">
+      <h1>About</h1>
 
-    <div class="left">
-      <img src="src/img/me.jpg">
-    </div>
+      <span class="me">
+        <div class="col-sm-5 col-xs-10">
+          <h2>浅野 竣弥<br class="only-sp" />（あさの しゅんや）</h2>
+          <h2>Born in 1997</h2>
+          <h3>2016 大阪府立大学 入学</h3>
+          <h3>2020 大阪府立大学 卒業</h3>
+          <h3>2020~Now 大阪府立大学大学院</h3>
+          <h3>人間社会システム科学研究科<br>現代システム科学専攻<br>知識情報システム学分野<br>-Sustainable Science System-<br></h3>
 
-    <div class="right">
-      <h2>浅野　竣弥</h2>
-      <h3>大阪府立大学大学院 人間社会システム科学研究科</h3>
-      <h3>現代システム科学専攻 知識情報システム学分野</h3>
-      <p>　</p>
-      <p>専攻：深層学習(主に画像認識)</p>
-      <p>所属：知的信号処理研究室(柳本研究室)</p>
-      <ul>
-        <p>研究：</p>
-        <li>　文章からの画像生成における意味的な整合性の検討</li>
-        <li class="en">　A Study of Semantic Consistency in Generating Adversarial Text-to-Image Synthesis</li>
-        <li>　画像領域分割による海底画像データに対する生きたサンゴの抽出</li>
-        <li class="en">　Extraction of Live Corals from Seafloor Image Data Using Semantic Segmentation</li>
-      </ul>
-    </div>
+          <p>専攻は、深層学習(画像生成や画像認識が主)です。</p>
+          <p>これまでの研究では以下の2点を調査しました。</p>
+          <ul>
+            <li>文章からの画像生成における意味的な整合性の検討</li>
+            <li class="en">A Study of Semantic Consistency in Generating Adversarial Text-to-Image Synthesis</li>
+            <li>画像領域分割による海底画像データに対する生きたサンゴの抽出</li>
+            <li class="en">Extraction of Live Corals from Seafloor Image Data Using Semantic Segmentation</li>
+          </ul>
 
-  </section>
+          <p>現在は、大学院は休学しており、『新しい就活の在り方を実現す』べく、友人と起業し、自社開発と受託開発をこなしております。</p>
 
-  <section id="Expertise">
-    <h1 class="font font-M">Expertise</h1>
+          <p>趣味はロッククライミングです。クライミングの合間にエンジニアリングをしています。</p>
+        </div>
+      </span>
 
-    <div class="left">
-      <h2>Programming</h2>
-      <p>フロントエンド：HTML/CSS/JavaScript(jQeury/Vue.js)</p>
-      <p>バックエンド： Java, MySQL, PHP, Python(Django)</p>
-      <p>その他：Processing(p5.js), Python(pytorch)</p>
+    </section>
 
-      <h2>Key typing</h2>
-      <p>8.0key/sec</p>
-    </div>
+    <section id="Expertise" class="row">
+      <h1>Expertise</h1>
 
-    <div class="right">
-      <h2>Deep Learning</h2>
-      <ul>
-        <li>敵対的生成ネットワーク</li>
-        <li class="en">Generative Adversarial Network</li>
-        <li>セマンティック・セグメンテーション</li>
-        <li class="en">Semantic Image Segmentation</li>
-      </ul>
-    </div>
+      <div class="col-sm-6">
+        <h2>Programming</h2>
+        <p>フロントエンド：HTML/CSS/JavaScript(jQeury/Vue.js/React)</p>
+        <p>バックエンド： Ruby(rails), PHP, Python(Django, Flask)</p>
+        <p>データベース： SQL</p>
+        <p>AI：Python(pytorch)</p>
+        <p>その他：Processing(p5.js)</p>
 
-  </section>
+        <h2>Key typing</h2>
+        <p>8.0key/sec</p>
+      </div>
 
-  <section id="Projects">
-    <h1 class="font font-M">Projects</h1>
-    <div class="projects">
-      <img src="src/img/projects/portfolio.jpg" alt="img/jpg">
-      <h2>Web Design</h2>
-      <p>言語: HTML/CSS/Vue.js/p5.js</p>
-      <p>responsive design を導入しています.</p>
-    </div>
+      <div class="col-sm-6">
+        <h2>Deep Learning</h2>
+        <ul>
+          <li>敵対的生成ネットワーク</li>
+          <li class="en">Generative Adversarial Network</li>
+          <li>セマンティック・セグメンテーション</li>
+          <li class="en">Semantic Image Segmentation</li>
+        </ul>
+      </div>
 
-    <div class="projects">
-      <img src="src/img/projects/piggybox.png" alt="img/png">
-      <h2>貯金箱アプリ「piggybox」</h2>
-      <p>あなたの貯金を管理するシンプルな方法。</p>
-      <p>公開まで暫しお待ちください。</p>
-    </div>
+    </section>
 
-    <div class="projects">
-      <img src="src/img/projects/coral.png" alt="img/png">
-      <h2>Semantic Segmentation</h2>
-      <p>生きたサンゴの被覆領域を推定する為,</p>
-      <p>海底画像データに対するサンゴの抽出を行いました.</p>
-    </div>
+    <section id="Projects">
+      <h1>Projects</h1>
 
-    <div class="projects">
-      <img src="src/img/projects/processing.gif" alt="img/gif">
-      <h2>Digital Art</h2>
-      <p>Processingでインタラクションを作成しました.</p>
-    </div>
+      <div class="projects">
+        <img src="assets/img/projects/portfolio.jpg" alt="img/jpg">
+        <h2>Web Design</h2>
+        <p>言語: HTML/CSS/Vue.js/p5.js</p>
+        <p>responsive design を導入しています.</p>
+      </div>
 
-    <div class="projects">
-      <img src="src/img/projects/卒論.png" alt="img/png">
-      <h2>thesis</h2>
-      <p>本研究では, テキストと生成された画像間に意味的な整合性を持つかどうか検討しました. 整合性を検討する為, 具体性のあるテキスト, 例えば個数について言及するものや,
-        空間的位置関係などが記述されたテキストに沿った画像を訓練データとして用いています.
-      </p>
-    </div>
+      <div class="projects">
+        <img src="assets/img/projects/piggybox.png" alt="img/png">
+        <h2>貯金箱アプリ「piggybox」</h2>
+        <p>あなたの貯金を管理するシンプルな方法。</p>
+        <p>公開まで暫しお待ちください。</p>
+      </div>
 
-    <div class="projects">
-      <img src="src/img/projects/django.png" alt="img/png">
-      <h2>webアプリケーション</h2>
-      <p>Djangoチュートリアルを独習。(<a href="//b628alloon.pythonanywhere.com/">Django Girls</a>/Django 公式チュートリアル/MDN: The Local Library website)</p>
-    </div>
+      <div class="projects">
+        <img src="assets/img/projects/coral.png" alt="img/png">
+        <h2>Semantic Segmentation</h2>
+        <p>生きたサンゴの被覆領域を推定する為,</p>
+        <p>海底画像データに対するサンゴの抽出を行いました.</p>
+      </div>
 
-  </section>
+      <div class="projects">
+        <img src="assets/img/projects/processing.gif" alt="img/gif">
+        <h2>Digital Art</h2>
+        <p>Processingでインタラクションを作成しました.</p>
+      </div>
 
-  <section id="Note">
-    <h1 class="font font-M">Note</h1>
-    <div class="left">
-      <h2>クライミングで培った『物事を多角的に捉える力』</h2>
-      <p>クライミングはゴールだけが設定されており、 それまでの過程は一意に決められていません。 そのため、ゴールへの糸口を様々な角度から考える力が養われます。
-        1つの(偏った)情報だけで、物事を分かった気にならないよう異なるソースから情報を集めるよう普段から努めています。 ちなみに SPORT CLIMBING JAPAN TOUR 2019 の RANKING
-        に載るほどクライミングにのめり込みました✨
-      </p>
+      <div class="projects">
+        <img src="assets/img/projects/卒論.png" alt="img/png">
+        <h2>thesis</h2>
+        <p>本研究では, テキストと生成された画像間に意味的な整合性を持つかどうか検討しました. 整合性を検討する為, 具体性のあるテキスト, 例えば個数について言及するものや,
+          空間的位置関係などが記述されたテキストに沿った画像を訓練データとして用いています.
+        </p>
+      </div>
 
-    </div>
-    <div class="right">
-      <img src="src/img/result.png" alt="img/png">
-    </div>
-  </section>
+    </section>
 
-  <section id="Contact" style="text-align: center;">
-    <h1 class="font font-M">Contact</h1>
+    <!--
+    <section id="Note" class="row"></section>
+    -->
 
-    <div class="mail-box">
-      <div class="contents">
-        <div class="title">お仕事の依頼はこちらまで</div>
-        <div class="font font-S">
-          <p><a href="mailto:kda7sshump.aur@gmail.com">kda7sshump.aur@gmail.com</a></p>
+    <section id="Contact">
+      <h1 class="font-M">Contact</h1>
+
+      <div class="mail-box">
+        <div class="contents">
+          <div class="message">お仕事の依頼はこちらまで</div>
+          <div class="font-S">
+            <p><a href="mailto:kda7sshump.aur@gmail.com">kda7sshump.aur@gmail.com</a></p>
+          </div>
         </div>
       </div>
-    </div>
-
-    <ul>
-      <li>
-        <a href="https://twitter.com/A9qoxC" style="color:#1ca4f4;">
-          <img src="src/icon/Twitter_Social_Icon_Rounded_Square_Color.png">@A9qoxC
-        </a>
-      </li>
-      <li>
-        <a href="https://www.instagram.com/shum_p_shum/" style="color:#6154ca;">
-          <img src="src/icon/480px-Instagram_icon.png">@shum_p_shum
-        </a>
-      </li>
-      <li>
-        <a href="https://note.com/kda7sshump/" style="color:#44ccb4;">
-          <img src="src/icon/logo_symbol.png">
-          <p style="color: #44ccb4;">しゅんや</p>
-        </a>
-      </li>
-      <li>
-        <a href="https://github.com/kda7s-Shump/" style="color:#000000;">
-          <img src="src/icon/GitHub-Mark-120px-plus.png">
-          <p>kda7s-Shump</p>
-        </a>
-      </li>
-    </ul>
-
-
-  </section>
+      <div class="row justify-content-center">
+        <div class="col-2">
+          <a href="https://twitter.com/A9qoxC">
+            <img src="assets/icon/Twitter_Social_Icon_Rounded_Square_Color.png">
+            <p class="only-pc" style="color:#1ca4f4;">@A9qoxC</p>
+          </a>
+        </div>
+        <div class="col-2">
+          <a href="https://www.instagram.com/shum_p_shum/">
+            <img src="assets/icon/480px-Instagram_icon.png">
+            <p class="only-pc" style="color:#6154ca;">@shum_p_shum</p>
+          </a>
+        </div>
+        <div class="col-2">
+          <a href="https://note.com/kda7sshump/">
+            <img src="assets/icon/logo_symbol.png">
+            <p class="only-pc" style="color:#44ccb4;">しゅんや</p>
+          </a>
+        </div>
+        <div class="col-2">
+          <a href="https://github.com/kda7s-Shump/">
+            <img src="assets/icon/GitHub-Mark-120px-plus.png">
+            <p class="only-pc" style="color:#000000;">kda7s-Shump</p>
+          </a>
+        </div>
+      </div>
+    </section>
+  </article>
 
   <footer>
     <ul>
-      <li><img src="src/img/favicon.png" alt="img/png"></li>
+      <li><img src="assets/img/favicon.png" alt="img/png"></li>
       <li><a href="#Top">Top</a></li>
       <li><a href="#About">About</a></li>
       <li><a href="#Expertise">Expertise</a></li>

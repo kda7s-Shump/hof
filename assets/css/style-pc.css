@@ -1,0 +1,48 @@
+@media screen and (min-width: 768px) {
+  p {
+    margin: 0 -1em;
+  }
+  .font-S {
+    font-size: 1.2rem;
+  }
+  section h1 {
+    font-size: 3rem;
+    margin-left: 1em;
+  }
+
+  #app {
+    display: none;
+  }
+  nav {
+    align-items: center;
+    background: rgba(255, 255, 255, 0.75);
+    position: fixed;
+    width: 100%;
+  }
+  nav ul {
+    display: flex;
+    height: 50px;
+    justify-content: space-evenly;
+  }
+  nav img {
+    height: 50px;
+  }
+  nav a:hover {
+    text-shadow: 0 0 10px var(--sub-color-light);
+  }
+
+  .projects {
+    width: 40%;
+  }
+  .projects img {
+    width: 25vw;
+  }
+  #Contact .mail-box {
+    margin: 0 25%;
+  }
+  #Contact ul {
+    display: flex;
+    height: 50px;
+    justify-content: space-evenly;
+  }
+}
