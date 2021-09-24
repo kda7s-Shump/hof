@@ -135,7 +135,8 @@ main > * {
 
 .intro {
   padding-top: 4rem;
-  color: var(--main-color-2);
+  padding-left: 4rem;
+  color: var(--main-color-1);
   font-size: var(--h1);
   letter-spacing: 0.1em;
   text-align: left
@@ -146,6 +147,7 @@ main > * {
 }
 
 .intro-ja {
+  padding-left: 4rem;
   color: var(--black);
   font-size: 1.5rem
 }
