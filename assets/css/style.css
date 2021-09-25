@@ -9,8 +9,8 @@
   --main-color-4: #cef7e0;
   --black:        #363636;
   --grey:         #999999;
-  --white:        #F6F6F6;
-  --white-shadow: #F8F8F8;
+  --white:        #fbfffd;
+  --white-shadow: #ebdfdd;
 
   --h1:    min(3.5rem, 8vw);
   --h1×08: min(calc(3.5rem * 0.8), calc(8vw * 0.8));
@@ -62,7 +62,7 @@ header {
 }
 
 header img {
-  padding: 2%
+  padding: 2% 2% 1%
 }
 @media screen and (min-width: 1198px) {
   header img{
@@ -114,12 +114,11 @@ header img {
 
 main {
   width: 100%;
-  margin: -1.1rem 0;
+  margin: 0 0 -1.1rem;
   padding: 3.75rem 0 1rem;
   box-shadow: 0 0 5px var(--white-shadow);
   background-color:   var(--white);
   text-align: center;
-  clip-path: polygon(0% 100%, 4% 0%, 96% 0%, 100% 100%);
 }
 
 main b {
@@ -133,10 +132,17 @@ main > * {
   margin: auto 3.75rem
 }
 
+#name {
+  width: 105vh;
+  height: 105vh;
+  margin-top: -5vh;
+  background-color: var(--main-color-1)
+}
+
 .intro {
-  padding-top: 4rem;
+  padding-top: calc(8rem + 5vh);
   padding-left: 4rem;
-  color: var(--main-color-1);
+  color: var(--white-shadow);
   font-size: var(--h1);
   letter-spacing: 0.1em;
   text-align: left
@@ -148,7 +154,7 @@ main > * {
 
 .intro-ja {
   padding-left: 4rem;
-  color: var(--black);
+  color: var(--white);
   font-size: 1.5rem
 }
 
@@ -209,19 +215,129 @@ section h2 u {
   color: var(--grey)
 }
 
-#skillSet aside {
-  width: calc(100% - (3.75rem));
-  margin-left: calc(3.75rem * 2)
-}
-
-#skillSet aside p,
-#skillSet aside li {
-  text-align: left
-}
-
 #skillSet article {
-  margin: 1rem auto
+  margin: 1rem
 }
+
+#skillSet .hexagon {
+  width: 6.25rem;
+  height: 11rem;
+  position: relative;
+}
+
+#skillSet .hexagon.color1,
+#skillSet .hexagon.color1::before,
+#skillSet .hexagon.color1::after {
+  background: var(--main-color-1);
+}
+
+#skillSet .hexagon.color2,
+#skillSet .hexagon.color2::before,
+#skillSet .hexagon.color2::after {
+  background: var(--main-color-2);
+}
+
+#skillSet .hexagon.color3,
+#skillSet .hexagon.color3::before,
+#skillSet .hexagon.color3::after {
+  background: var(--main-color-3);
+}
+
+#skillSet .hexagon_cont {
+  height: 100%;
+  font-weight: bold;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+
+#skillSet .hexagon::before,
+#skillSet .hexagon::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+
+#skillSet .hexagon::before {
+  transform: rotate(60deg);
+}
+
+#skillSet .hexagon::after {
+  transform: rotate(-60deg);
+}
+
+#skillSet dl {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+}
+
+#skillSet dt {
+  display: block;
+  align-self: flex-start;
+  margin: 0 4rem 1rem;
+
+  color: var(--main-color-1);
+  font-weight: bold;
+  font-size: 1.2em;
+  text-align: center;
+}
+
+#skillSet .text {
+  display: flex;
+  justify-content: flex-end;
+  position: absolute;
+  left: 0;
+  font-weight: 600;
+  align-items: center;
+  height: 2rem;
+}
+
+#skillSet .percentage {
+  height: 2rem;
+  margin-left: 8rem;
+  font-size: .8em;
+  line-height: 1;
+  background: repeating-linear-gradient(
+    to right,
+    var(--main-color-4),
+    var(--main-color-3) 1px,
+    var(--white) 1px,
+    var(--white) 5%
+  );
+}
+
+.percentage:after {
+  display: block;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 50px;
+  height: 90%;
+  margin-bottom: 10px;
+  background-color: var(--main-color-2);
+  content: "";
+  cursor: pointer;
+  transition: background-color .3s ease;
+}
+
+.percentage-10:after {width: 10%}
+.percentage-20:after {width: 20%}
+.percentage-30:after {width: 30%}
+.percentage-40:after {width: 40%}
+.percentage-50:after {width: 50%}
+.percentage-60:after {width: 60%}
+.percentage-70:after {width: 70%}
+.percentage-80:after {width: 80%}
+.percentage-90:after {width: 90%}
 
 #contact > * {
   display: block;
@@ -232,7 +348,7 @@ section h2 u {
 }
 #contact .say-hello {
   max-width: 240px;
-  border: 2px solid var(--main-color-3);
+  border: 2px solid var(--main-color-2);
   border-radius: .25rem;
   color: var(--main-color-2);
   font-weight: 600;
@@ -252,7 +368,7 @@ footer {
   bottom: 0;
   width: 100%;
   margin: 0 auto;
-  background-color: var(--main-color-3);
+  background-color: var(--main-color-1);
   height: 10rem;
 }
 
@@ -273,7 +389,7 @@ footer img {
 }
 
 footer small {
-  color: var(--main-color-4);
+  color: var(--main-color-3);
   padding: 1rem;
 }
 
@@ -334,6 +450,29 @@ footer svg {
 @media screen and (min-width: 768px) {
   .only-sp {
     display: none;
+  }
+
+  #skillSet .hexagon.color1 {
+    margin: -0.1rem 18.3rem -0.1rem;
+  }
+
+  #skillSet .hexagon.color2,
+  #skillSet .hexagon.color3{
+    margin-left: 12rem;
+  }
+
+  #skillSet dl {
+    margin: 0 1rem 1rem;
+    padding: 0 1rem 1rem;
+  }
+
+  #skillSet .text {
+    width: 130px;
+  }
+
+  #skillSet dt,
+  #skillSet .percentage {
+    width: 100%;
   }
 
   footer small {

@@ -8,7 +8,7 @@ let canvas;
 function setup(){
   canvas = createCanvas(windowWidth, windowHeight - 22);
   canvas.parent("Canvas");
-	background(247, 247, 247);
+	background(251, 255, 253);
 	for(var i = 0; i < num; i++){
 		particles_a[i] = new Particle(random(0, width),random(0,height));
 		particles_b[i] = new Particle(random(0, width),random(0,height));
@@ -23,17 +23,17 @@ function draw(){
 		var radius = map(i,0,num,1,2);
 		var alpha = map(i,0,num,0,250);
 
-    fill(46, 87, 64,alpha);
+    fill(46, 87, 64, alpha);
 		particles_a[i].move();
 		particles_a[i].display(radius);
 		particles_a[i].checkEdge();
 
-    fill(206, 247, 224,alpha);
+    fill(206, 247, 224, alpha);
 		particles_b[i].move();
 		particles_b[i].display(radius);
 		particles_b[i].checkEdge();
 
-		fill(225,225,225,alpha);
+		fill(225, 225, 225, alpha);
 		particles_c[i].move();
 		particles_c[i].display(radius);
 		particles_c[i].checkEdge();
